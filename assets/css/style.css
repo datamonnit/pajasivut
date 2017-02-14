@@ -110,9 +110,7 @@ nav ul li {display: inline-block; }
 li.tab1{
   background-color: #ffcee3;
   padding: 20px;
-  -ms-transform: rotate(-8deg); /* IE 9 */
-  -webkit-transform: rotate(-8deg); /* Chrome, Safari, Opera */
-  transform: rotate(-8deg);
+  
 
 }
 

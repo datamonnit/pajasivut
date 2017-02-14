@@ -2,6 +2,35 @@
   margin: 0; padding: 0; box-sizing: border-box;
 }
 
+/* Mixin */
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.branding {
+  display: block;
+  float: left;
+  /*@include vertical-align();*/
+}
+.branding img {
+  display: block;
+  float: left;
+  margin: 0 10px;
+  height: 2.5em;
+  width: auto;
+  @include vertical-align();
+
+  -ms-transform: rotate(-15deg); /* IE 9 */
+  -webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+  transform: rotate(-15deg);
+}
+
+
+
 html, body{
   height: 100%;
   margin: 0;
@@ -19,7 +48,7 @@ footer, .push {
   height: 50px;
 }
 
-h1,h2, li a {
+h1,h2, li a, footer p {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -97,8 +126,16 @@ header nav{
 
 header nav ul li {display: inline-block; }
 
+
+
 li{
   padding: 10px;
+}
+
+.dropdown li{
+  display: block;
+  padding: 5px;;
+  margin: 0;
 }
 
 .dropdown {
@@ -114,7 +151,7 @@ li{
 
 .dropdown-content a {
     background-color: #222;
-    padding: 12px 16px;
+    padding: 10px 10px;
     text-decoration: none;
     display: block;
     text-align: left;
