@@ -2,6 +2,49 @@
   margin: 0; padding: 0; box-sizing: border-box;
 }
 
+html, body{
+  height: 100%;
+}
+
+/* Navigointi */
+.icon {
+  display: none;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown-content li {
+  background-color: #7F5F7C;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 768px) {
+  /* .topnav li:not(:first-child) {display: none;} */
+  .topnav ul { clear: both; }
+  .topnav li { display: none; }
+  .icon {
+    display: block;
+    padding-right: 10px;
+    font-size: 1.5em;
+  }
+  
+  .topnav.responsive {position: relative;}
+  .topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .responsive li, .responsive li a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content { margin-top: 15px; }
+}
+
+
 /* Mixin */
 @mixin vertical-align($position: relative) {
   position: $position;
@@ -9,36 +52,29 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
+} 
 
 .branding {
   display: block;
   float: left;
-  /*@include vertical-align();*/
-}
+  @include vertical-align();
+} 
+
 .branding img {
   display: block;
   float: left;
   margin: 0 10px;
   height: 2.5em;
   width: auto;
-  @include vertical-align();
+  @include vertical-align(); 
 
-  -ms-transform: rotate(-15deg); /* IE 9 */
-  -webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+  -ms-transform: rotate(-15deg); 
+  -webkit-transform: rotate(-15deg); 
   transform: rotate(-15deg);
-}
-
-
-
-html, body{
-  height: 100%;
-  margin: 0;
 }
 
 .wrapper {
   min-height: 100%;
-
   /* Equal to height of footer */
   /* But also accounting for potential margin-bottom of last child */
   margin-bottom: -50px;
@@ -49,7 +85,7 @@ footer, .push {
 }
 
 h1,h2, li a, footer p {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -104,14 +140,15 @@ hr.style-two {
 }
 
 .heading {
-  background-color: #222;
-  padding: 10px 0px;
+  background-color: #4D394B;
+  padding: 20px 0px;
   color: #ccc;
+  font-size: 1.1em;
 }
 .heading a {
   color: #ccc;
   text-decoration: none;;
-  font-size: 1.2em;
+  
 }
 
 header h1 {
@@ -132,33 +169,27 @@ li{
   padding: 10px;
 }
 
-.dropdown li{
+/* .dropdown li{
   display: block;
   padding: 5px;;
   margin: 0;
-}
+} */
 
-.dropdown {
+/* .dropdown {
   z-index: 85;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #222;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
+} */
 
-.dropdown-content a {
+
+/* .dropdown-content a {
     background-color: #222;
     padding: 10px 10px;
     text-decoration: none;
     display: block;
     text-align: left;
-}
+} */
 
-.dropdown-content a:hover {background-color: #444}
+/* .dropdown-content a:hover {background-color: #444}
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
