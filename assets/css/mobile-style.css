@@ -26,10 +26,6 @@ hr.style-two {
   display: none;
 }
 
-.show {
-  display: block;
-}
-
 /* Mixin */
 @mixin vertical-align($position: relative) {
   position: $position;
@@ -104,6 +100,7 @@ header li {
 
 .dropdown-content {
   display: none;
+  position: absolute;
 }
 
 .dropdown-content a {
@@ -124,6 +121,9 @@ header li {
 
 .dropdown-content li:hover {background-color: #444}
 
+.show {
+  display: block;
+}
 
 /* Showcase */
 #showcase {
@@ -192,10 +192,15 @@ header li {
   margin-left: 0px;
 }
 
+.ruudukko li a {
+  color: #325A2B;
+  text-decoration: none;
+}
+
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100px;
+  /* grid-template-rows: 100px; */
   background-color: #4D394B;
   color: #ccc;
   margin: 10px auto;
