@@ -10,6 +10,22 @@ h1,h2, li a, footer, p {
   font-family: 'Lato', sans-serif;
 }
 
+.ruudukko ul {
+  list-style: none;
+  padding: 0;
+}
+.ruudukko li {
+  padding-left: 1.3em;
+}
+.ruudukko li:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+
+
 .container {
 max-width: 970px;
 margin: 0 auto;
@@ -158,29 +174,50 @@ header li {
 
 
 .ruudukko > section {
-  /* border: 2px solid #4D394B;
-  border-radius: 5px; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3em auto min-content;
   background-color: #ccc;
   padding: 0;
   margin: 0.5em;
   color: #4D394B;
 }
 .ruudukko h2 {
-  background-color: #2EA664;
+  /* background-color: #2EA664; */
+  background-color: #335B2C;
   padding: 10px;
   color: #fff;
 }
 
 .ruudukko p {
-  padding: 10px;
-  line-height: 1.4em;
+  margin: 10px;
 }
 
-.ruudukko button {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.ruudukko .more {
+  line-height: 1em;
+  text-align: right; 
+  margin: 0px;
+}
+
+.btn { 
+  padding: 10px 20px;
+  background-color: #E83A1D;
+  color: #fff;
+  border: none;
+  margin: 10px;
+  border-radius: 2px;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2); 
+}
+
+.btn:hover {
+  background-color: rgb(192, 49, 24);
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2); 
+  color: #fff;
+}
+
+.btn:active {
+  box-shadow: none;
+  border:none; 
 }
 
 .ruudukko ul {
@@ -200,20 +237,27 @@ header li {
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: 100px; */
+  grid-auto-rows: auto;
+  grid-template-areas: "a a b b";
   background-color: #4D394B;
   color: #ccc;
-  margin: 10px auto;
+  margin: 10px 0 0 0;
   padding: 10px;
   text-align: center;
+  vertical-align: middle;
+}
+
+footer li {
+  display: inline-block;
+  margin: 20px;
 }
 
 footer img {
   height: 80px;
 }
 
-footer > section {
-
+.copy {
+  margin-top: 20px;
 }
 
 
@@ -276,9 +320,14 @@ footer > section {
     grid-template-rows: 100%;
   }
 
-  .ruudukko > section {
-    
+  /*******************************************
+  **      Mobiili-footer                     **
+  ********************************************/
+  footer {
+    display: block;
+    width: 100%;
   }
+  
 
 }
 
