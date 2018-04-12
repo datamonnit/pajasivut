@@ -19,14 +19,19 @@
       <header class="row heading">
         <div class="container">
           <div class="branding">
-            <img class="heading-img" src="assets/img/esedu_favico.png" style="" alt="Esedu Favicon"/>
-            <h1 class="heading-img">datamonnit</h1>
+              <a href="https://paja.esedu.fi">
+                <img class="heading-img" src="./assets/img/esedu_favico.png" style="" alt="Esedu Favicon"/>
+                <h1 class="heading-img">datamonnit</h1>
+              </a>
           </div>
           <nav class="icon"><a href="javascript:void(0);" onclick="blockToggle('topnav')">&#9776;</a></nav>
           <nav id="topnav" class="topnav">
             <ul>
-              <li class=""><a href="#">Projektit</a></li>
-              <li class=""><a href="#">Yhteystiedot</a></li>
+                <li class="active"><a href="./staff">Staff</a></li>
+                <li class=""><a href="https://ossi.esedu.fi">Ossi</a></li>
+                <li class=""><a href="./pelit">Pelit</a></li>
+                <li id="login">Login</li>
+            <!--
               <li  class="dropdown">
               <a href="javascript:void(0)" onclick="childToggle(this)" class="drop-btn">Ryhmät &nbsp;</a>
                  <ul class="dropdown-content">
@@ -34,17 +39,20 @@
                    <li><a href="#">Käytöntuki</a></li>
                  </ul>
               </li>
+            -->
+            <!--
               <li  class="tab6"><a href="#">Kuvia</a></li>
               <li  class="tab6"><a href="#">Some</a></li>
             </ul>
+          -->
           </nav>
         </div>
       </header>
   
-      <section id="showcase">
+      <section id="showcase" class="index">
           <div class="container">
-              <h1>Datamonnit</h1>
-              <p>Bittinikkarit vauhdissa</p>
+              <h1><span class="dark_bg">Datamonnit</span></h1>
+              <p><span class="dark_bg">Bittinikkarit vauhdissa</span></p>
           </div>
       </section>
 
@@ -62,16 +70,18 @@
               <p>Käy tutustumassa opiskelijoiden tuotoksiin!</p>
             </div>
         </section>
+        <!--
         <section>
           <h2>Opettajat</h2>
           <div>
             <p>
               Datamonniopet ovat mahtavia tyyppejä, joiden hauskat jutut ja mahtavat ohjeet siivittävät sinut huikeisiin opiskelusuorituksiin.
             </p>
-            <p>Tutustu opettajiin lähemmin</p>
+            <p>Opettajien omat sivut julkaistaan pian!</p>
           </div>
-          <p class="more"><button class="btn">Lisää</button></p>
+          <p class="more"><a class="btn" href="#">Tutustu opettajiin</a></p>
         </section>
+      -->
         <section>
             <h2>Opiskelu</h2>
             <div>
@@ -79,7 +89,7 @@
                 Parhaiten oppii tekemällä. Siispä luentomaista apinaopetusta on vain joidenkin teemapäivien aikana. Todellinen oppiminen tapahtuu työelämälähtöisissä projekteissa. Joita löydät OSSI-järejstelmästä.
               </p>
             </div>
-            <p class="more"><button class="btn">Lue lisää</button></p>
+            <p class="more"><a class="btn" href="https://ossi.esedu.fi">Siirry OSSIin</a></p>
         </section>
         <section>
             <h2>Pelit</h2>
@@ -88,13 +98,14 @@
                 Tutustu opiskelijoiden tekemiin peleihin. Niitä on tehty vuosien varrella useita ja toinen toistaan parempia. Voite pelata mm. Slaavikyykkyä, Hirvipeliä ja monia muita klassikoita.
               </p>
             </div>
-            <p class="more"><button class="btn">Lisää</button></p>
+            <p class="more"><a class="btn" href="./pelit">Kokeile pelejä</a></p>
         </section>
+        
         <section>
             <h2>Some</h2>
             <div>
               <p>
-                Datamoniit ovat myös vallanneet sosiaalisen median. Seuraa meitä Facebookissa sekä Youtubessa.
+                Datamonnit ovat myös vallanneet sosiaalisen median. Seuraa meitä Twitchissä sekä Youtubessa.
               </p>
               <p><a href="https://www.youtube.com/channel/UCwDwx63XPM27Wz66mrq5-hw" target="_new">
                 <img src="assets/img/yt.png" alt="youtube-logo">
@@ -103,8 +114,9 @@
                 <img src="assets/img/twitch.png" alt="twitch-logo">
               </a></p>
             </div>
-            <p class="more"><button class="btn">Lisää</button></p>
         </section>
+
+        
       </main>
     </div>
 
@@ -128,15 +140,18 @@
                 </a>
             </li>
             <li>
-                <a href="https://twitch.tv/codingesedu">
+                <a href="https://github.com/datamonnit">
                   <img src="assets/img/github_light.png" style="height: 40px;" alt="github-logo">
                 </a>
+            </li>
+            <li>
+                
             </li>
 
           </ul>
         </section>
         <section>
-            <p class="copy">© 2014-2017 Datamonnit, All rights reserved. MIT License</p>            
+            <p class="copy">© 2014-2017 Datamonnit, All rights reserved. MIT License</p>
         </section>
     </footer>
 
