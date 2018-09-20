@@ -107,18 +107,30 @@ hr.style-two {
 }
 
 .some {
-  display: block;
-  padding: 10px;
+  font-size: 0.9em;
   width: 100%;
-  float: right;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  text-align: center;
+}
+
+.some i {
+  font-size: 4em;
+  display: block;
+  clear: both;
+  margin: 0 5px;
+  
 }
 
 .some a {
   color: black;
-  font-size: 2.5em;
-  display: inline-block;
-  clear: both;
-  margin: 0 5px;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.some a:hover {
+  color: #444;
 }
 
 /*******************************************
@@ -347,6 +359,10 @@ footer li {
   margin: 20px;
 }
 
+footer i {
+  font-size: 3em;
+  color: #ccc;
+}
 footer img {
   height: 80px;
 }
@@ -364,7 +380,7 @@ footer img {
 /*******************************************
 **      Mobiili -tyylit                   **
 ********************************************/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   
   /*******************************************
   **      Mobiili-navigaatio                **
@@ -424,5 +440,19 @@ footer img {
   }
   
 
+}
+
+@media screen and (max-width: 600px) {
+  footer section {
+    margin: 0;
+    padding: 0;
+    clear: both;
+  }
+  footer li {
+    display: block;
+    width: 33%;
+    float: left;
+    margin: 20px 0;
+  }
 }
 

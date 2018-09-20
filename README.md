@@ -1,2 +1,3 @@
-# pajasivut
-Paja-palvelimen sivut
+# it.esedu.fi -sivut
+Datanomien ja ICT-asentajien yhteiset sivut
+I
