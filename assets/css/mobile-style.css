@@ -90,7 +90,7 @@ hr.style-two {
 .branding {
   display: block;
   float: left;
-  @include vertical-align();
+  /* @include vertical-align(); */
 } 
 
 .branding img {
@@ -99,7 +99,7 @@ hr.style-two {
   margin: 0 10px;
   height: 2.5em;
   width: auto;
-  @include vertical-align(); 
+  /* @include vertical-align();  */
 
   -ms-transform: rotate(-15deg); 
   -webkit-transform: rotate(-15deg); 
@@ -354,6 +354,12 @@ footer {
   vertical-align: middle;
 }
 
+footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 footer li {
   display: inline-block;
   margin: 20px;
@@ -368,7 +374,8 @@ footer img {
 }
 
 .copy {
-  margin-top: 20px;
+  font-size: 1.5em;
+  vertical-align: middle;
 }
 
 
@@ -425,25 +432,32 @@ footer img {
   /* Grid-styles */
   .ruudukko {
     max-width: 970px;
-    margin: 20px auto;
+    margin: 0px auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 100%;
   }
-
+  .ruudukko > section {
+    margin: 0px 0;
+  }
   /*******************************************
   **      Mobiili-footer                     **
   ********************************************/
   footer {
     display: block;
     width: 100%;
+    margin: 0;
+  }
+
+  footer {
+    font-size: 0.8em;
   }
   
 
 }
 
 @media screen and (max-width: 600px) {
-  footer section {
+  footer div {
     margin: 0;
     padding: 0;
     clear: both;
