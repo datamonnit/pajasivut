@@ -7,10 +7,6 @@ html, body{
   font-family: 'Lato', sans-serif;
 }
 
-h1,h2, li a, footer, p {
-  
-}
-
 .ruudukko ul {
   list-style: none;
   padding: 0;
@@ -233,9 +229,9 @@ nav li.active {
 }
 
 
-#showcase h1 {
-  font-size: 60px;
-  margin: 20px;
+#showcase h2 {
+  font-size: 4em;
+  margin: 0.5em;
 }
 
 #showcase p {
