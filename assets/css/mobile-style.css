@@ -354,7 +354,7 @@ footer {
   vertical-align: middle;
 }
 
-footer div {
+footer section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -470,3 +470,6 @@ footer img {
   }
 }
 
+.footer-esedu-logo {
+  height: 40px;
+}
