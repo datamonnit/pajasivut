@@ -350,7 +350,7 @@ footer {
   vertical-align: middle;
 }
 
-footer section {
+footer div {
   display: flex;
   flex-direction: column;
   justify-content: center;
